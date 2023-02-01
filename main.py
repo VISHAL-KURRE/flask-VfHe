@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, render_template
 import os
-import templates
+
 
 # app = Flask(__name__  )
 app = Flask(__name__  , template_folder='templates')
