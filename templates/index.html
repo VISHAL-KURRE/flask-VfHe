@@ -28,6 +28,7 @@
 
     <title>Vishal Responsive Portfolio</title>
 </head>
+{% block content %}
 
 <body>
     <!--==================== HEADER ====================-->
@@ -655,7 +656,7 @@
                         </a>
                     </div>
 <!--                    <img src="{{url_for('static', filename='images/vk_b.png')}}" alt="" class="project_img">-->
-                     <image src="{{url_for('static', filename='images/vk_b.png')}}" alt="" class="about_img">
+                     <image src ="{{url_for('static', filename='images/vk_b.png')}}" alt="" class="about_img">
 <!--                    <img href="{{url_for('static', filename='images/vk_b.png')}} " alt="" class="about_img" />-->
                     <p></p>
 <!--                    <image alt="" class="about_img"  href="{{url_for('static', filename='images/vk_b.png')}} " />-->
@@ -694,19 +695,41 @@
                         </div>
                     </div>
                 </div>
-                <form action="" class="contact_form grid">
+
+
+<!--                <form action="/" method="POST">-->
+<!--			  <div class="form-group">-->
+<!--			    <label for="exampleInputEmail1">Email address</label>-->
+<!--			    <input type="email" class="form-control" name="eemail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+<!--			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+<!--			  </div>-->
+<!--			  <div class="form-group">-->
+<!--			    <label for="exampleInputPassword1">Password</label>-->
+<!--			    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">-->
+<!--			  </div>-->
+
+<!--			  <div class="form-group">-->
+<!--			  	<a href="/signup">Join us now!</a>-->
+<!--			  </div>-->
+
+<!--			  <button type="submit" class="btn btn-primary">Signin</button>-->
+<!--			  	&lt;!&ndash; <a style="margin-left: 10px" href="/signup">Or join us now!</a> &ndash;&gt;-->
+<!--			    </form>-->
+
+                <form action="/" method="POST">
                     <div class="contact_inputs grid">
                         <div class="contact_content">
                             <label for="" class="contact_label">
                                 Name
                             </label>
-                            <input type="text" class="contact_input">
+                            <input name="name" type="text" class="contact_input">
+
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">
                                 Email
                             </label>
-                            <input type="email" class="contact_input">
+                            <input name="email" type="email" class="contact_input">
                         </div>
 
                     </div>
@@ -714,21 +737,25 @@
                         <label for="" class="contact_label">
                             Project
                         </label>
-                        <input type="text" class="contact_input">
+                        <input name="project" type="text" class="contact_input">
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">
                             Message
                         </label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                        <textarea name="message" id="" cols="0" rows="7" class="contact_input"></textarea>
                     </div>
                     <div>
-                    <a href="#" class="button button--flex">
-                        Send Message
-                        <i class="uil uil-message button_icon"></i>
-                    </a>
+
+                             <button type="submit" >
+                                  <a  class="button button--flex">Send Message
+                                      <i class="uil uil-message button_icon"></i>
+                                  </a>
+                             </button>
+
+
                      </div>
-                </form>
+                     </form>
             </div>
         </section>
     </main>
@@ -787,4 +814,5 @@
 
 </body>
 
+{% endblock %}
 </html>
