@@ -31,21 +31,19 @@ class contactForm(FlaskForm):
     Submit = SubmitField("Submit")
 
 
-def index1():
-     print("index1")
-     return "test"
+
 
 @app.route('/', methods = ['GET', "POST"])
 def index():
-    if request.method == 'POST':
-
-        _form = request.form
-        print(_form)
-        email = str(_form["email"])
-        name = str(_form["name"])
-        project = str(_form["project"])
-        message = str(_form["message"])
-    to_address = "+1 5419080576"
+    # if request.method == 'POST':
+    #
+    #     _form = request.form
+    #     print(_form)
+    #     email = str(_form["email"])
+    #     name = str(_form["name"])
+    #     project = str(_form["project"])
+    #     message = str(_form["message"])
+    # to_address = "+1 5419080576"
 
 
     return render_template('index.html')
